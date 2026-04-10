@@ -4,11 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-<script  defer src="./src/index.js" type="module"></script>
+    <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+    crossorigin="anonymous"
+    />
+    <script  defer src="./src/index.js" type="module"></script>
     <title>Learn About the Countries around the world!</title>
 </head>
 <body>
-    <header>
+    <header class="navbar bg-body-tertiary">
         <h3>Where in the world?</h3>
         <div id="toggleDarkMode">
             <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAAAsTAAALEwEAmpwYAAACv0lEQVR4nO2YW4hNURjHf46GNMwlxm00SEmIlEt5UC5DbqVchwfkAZFL0ihRSsk1isyDy7zReFE8eTDz4MU9Re40yGTIJffr0dZ/19fpzJx97H2cNdm/Wg977+9b67/WXrfvg5iYmJg0DAT60cYYBuwB7gJJ4AswiDbAUOAU8EvCbRmBw7QDqoEfaYR7pRaH6QGcN2K/ATXASz0/B0pwlG7ATSP+qub6RPNuM45SLMG+0CNAR32r0buvQBmOctKIP6h14PNY7y/iKFVG/NkU8aXm2wEcpAvwSgIbJdgyynRgBQ6ywQicm+b7JPPd+1NOUQA8MfPbTh2fStOB6ThGpRG3pAWbMcZmGo6xU8I+AoUt2JSZDqzEMa5JWEMGu6eyO4ZjfJKwHRnsamXndSSBIxRlMTWmGtvJOMIAI2pBBtv25o5Uj0ORVVJlfgD7mcZ+Hg7QywhaHtCnXvavgf7kmYRZxLsD+vQGnsnngZ7zypWA26hlpOm4tyuNJo/sM0G6tysFZRzQLN/vwF6gaxb+RcBW4D6wixBMMOtgWZa+XmrlhvH/DJwAFiuKK0ixLwdmAceBd8bvTdh10KiK7qVpNBMdgLUmXrblpxZ7k/5wuuSAH/mFYr2pbFWIcHQTcKsVoUmVDwpNk0rXDAnbgUJz12nWrw5Dhc6JLcB+4BCwTYMzFphh8kx1RMRsM0KXgE7khgpNKf8s6Rll5UdNJ+r+Yj1kojtwx7SxKOL6/4z6BdNAg/JEUTAYeGjq9qZUTihVaOk39Cjk7TMBrAbep6Rsckpn4HTKznFO2YmgeLfXOcB1U4eXZ13HP8IL7tekjFxSB9d2YArQ1yz2Em2HC4HDwIsUv9vAePJAHx00/r6dbWkCNurAyyvlSrdfbiXl7pe3wBmdBVHvZJFQrMvcUo1utUJS7ywZ7lLMHBMTE/Of8xvFDAS1Q/u2igAAAABJRU5ErkJggg==" alt="Cresent Moon shaped icon">
@@ -27,7 +33,7 @@
         </div>
 
         <div id="countriesContainers">
-            <ul id="list"></ul>
+            <ul id="list" class="container text-center"></ul>
             
         </div>
 

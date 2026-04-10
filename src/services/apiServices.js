@@ -14,16 +14,17 @@ export const getAllCountries = async () => {
         console.log(error)
     }
 }
+
 export const getAllBasicCountriesDetails = async () => {
     try {
         
-        let response = await fetch(`https://restcountries.com/v3.1/all?fields=name,region,capital,currencies,flags`)
+        let response = await fetch(`https://restcountries.com/v3.1/all?fields=name,region,capital,flags,population`)
         
-        let allCountries = await response.json()
+        let allCountriesDetails = await response.json()
 
         // console.log(allCountries)
         // console.log(allCountries[1])
-        return allCountries
+        return allCountriesDetails
     } catch (error) {
         console.log(error)
     }
@@ -31,21 +32,6 @@ export const getAllBasicCountriesDetails = async () => {
 
 // getAllCountries()
 
-
-export const getAllCountriesFlags = async () => {
-    try {
-        
-        let response = await fetch(`https://flagcdn.com/en/codes.json`)
-        
-        let allCountries = await response.json()
-
-        // console.log(allCountries)
-        console.log(allCountries)
-        
-    } catch (error) {
-        console.log(error)
-    }
-}
 
 // getAllCountriesFlags()
 
