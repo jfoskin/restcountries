@@ -17,7 +17,13 @@ header {
     margin: 10px;
 
 }
-.countryClass {
-    /* width: 100px; */
-    /* height: 100px; */
+.detailsFlag {
+    width:500px;
+    height: 500px;
+    background:blue;
+}
+.detailsBox {
+    width:500px;
+    height: 500px;
+    background:orange;
 }

@@ -2,9 +2,12 @@
 import { getAllCountries,
          getAllBasicCountriesDetails} from "../src/services/apiServices.js"
 
+import { singleCountryDetails } from "./utils/singleCountry.js"
+
 
 //define variables
 let countriesList = document.getElementById('list')
+let mainContainer = document.getElementById('mainContainer')
 let country = document.querySelector('.card > h4')
 
 // let alldetails = await getAllCountries()
@@ -51,41 +54,38 @@ let countryCards = async () =>{
         // li.appendChild(countryBasics)
         
         countriesList.appendChild(countryBasics)
+        // mainContainer.appendChild(countriesList)
     });
     
+
+    
+
 }
 
 
 
 //call functions 
-countryCards()
+// countryCards()
 
 
-console.log(`this is`, country)
 
 
-const getCountryDetails = async (name) => {
-    const response = await fetch(`https://restcountries.com/v3.1/name/${name}`)
-    const singleCountry = await response.json()
-    
-    console.log(singleCountry)
-    
-}
 
-// getCountryDetails(country)
 
 
 
 //call eventlisteners
 
-// window.addEventListener('load', countryCards)
+window.addEventListener('load', countryCards)
 
 list.addEventListener('click',(e)=>{
     console.log(e)
     // console.log(e.target)
     
-    let countryName = e.target.parentElement.childNodes[1].innerText 
+    let countryName = e.target.parentElement.childNodes[1].textContent.toLowerCase() 
     console.log(countryName)
-
+    countriesList.innerHTML =''
+    mainContainer.innerHTML = ''
+    singleCountryDetails(countryName)
 
 } )
