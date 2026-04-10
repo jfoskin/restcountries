@@ -96,7 +96,24 @@ Use this section to outline areas that you want to continue focusing on in futur
 ### Useful resources
 
 - [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
+- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this 
+concept.
+
+https://css-tricks.com/snippets/css/a-guide-to-flexbox/ 
+https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_toggle_dark_mode
+https://getbootstrap.com/docs/5.3/getting-started/introduction/
+https://developer.mozilla.org/en-US/docs/Web/API/History_API 
+https://restcountries.com 
+
+
+
+shout out to Village hidden in the 'A' 
+
+Tybrianna
+Fabiola - helped with dark theme doc
+Jasmine
+Keoki
+Billy
 
 **Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
 

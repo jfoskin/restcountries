@@ -30,14 +30,20 @@ export const getAllBasicCountriesDetails = async () => {
     }
 }
 
-export async function getCountryDetails(name) {
-    const response = await fetch(`https://restcountries.com/v3.1/name/${name}`)
-    const singleCountry = await response.json()
-    
-    // console.log(singleCountry)
-    return singleCountry[1]
-    
+
+
+export const getCountriesByRegion = async (regionValue) => {
+    try {
+        const response = await fetch(`https://restcountries.com/v3.1/region/${regionValue}`)
+        const countriesInRegion = await response.json()
+        console.log(countriesInRegion)
+        return countriesInRegion
+    } catch (error) {
+        console.log(error)
+    }
 }
+
+// getCountriesByRegion('europe')
 
 // getCountryDetails('jamaica')
 
