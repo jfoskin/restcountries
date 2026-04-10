@@ -8,7 +8,9 @@ import { singleCountryDetails } from "./utils/singleCountry.js"
 //define variables
 let countriesList = document.getElementById('list')
 let mainContainer = document.getElementById('mainContainer')
+let toggleDarkMode = document.getElementById('toggleDarkMode')
 let country = document.querySelector('.card > h4')
+let body = document.body
 
 // let alldetails = await getAllCountries()
 // console.log(alldetails)
@@ -77,6 +79,10 @@ let countryCards = async () =>{
 //call eventlisteners
 
 window.addEventListener('load', countryCards)
+
+toggleDarkMode.addEventListener('click', function (e){
+    body.classList.toggle('dark')
+})
 
 list.addEventListener('click',(e)=>{
     console.log(e)

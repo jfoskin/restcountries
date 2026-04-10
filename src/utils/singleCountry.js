@@ -35,7 +35,7 @@ console.log(name)
     // const borderCountryDetails = document.createElement('p')
     const borderCountries= document.createElement('div')
     const borderCountryDetails = document.createElement('div')
-imgDetails.src = aCountry[0].flags.svg
+    imgDetails.src = aCountry[0].flags.svg
     countryName.textContent = aCountry[0].name.common
     nativeNameDetail.textContent = aCountry[0].name.official
     populationDetails.textContent = aCountry[0].population

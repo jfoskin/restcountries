@@ -1,11 +1,24 @@
-*{
-    /* background: black; */
-    font-family: "Nunito Sans",
+/* html{
+    background-color:blue
+} */
+
+
+body{
+    background-color: white;
+    font-family: "Nunito Sans";
+    color:black;
 }
 
 header {
     margin: 10px;
 }
+.dark {
+    background-color: black:
+    color: white;
+    font-family: "Nunito Sans";
+}
+
+
 
 .list {
     /* display: flex; */
@@ -16,7 +29,7 @@ header {
 .card {
     width:300px;
     margin: 10px;
-
+    
 }
 
 .detailsDiv {
@@ -30,7 +43,7 @@ header {
 .detailsFlag  img {
     width: 500;
     height: 500px;
-  
+    
     margin:20px;
     padding:30px;
 }
@@ -39,5 +52,43 @@ header {
     height: 400px;
     /* background:orange; */
     margin:30px;
-    padding:30px;
+    padding:30px;    
 }
+
+
+
+#toggleDarkMode {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    
+}
+
+#toggleDarkMode img{
+    width:25px;
+    height:25px;
+}
+
+#filterContainer {
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+margin: 15px;
+}
+
+#search{
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
