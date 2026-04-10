@@ -1,5 +1,6 @@
 *{
     /* background: black; */
+    font-family: "Nunito Sans",
 }
 
 header {
@@ -26,17 +27,17 @@ header {
     padding:30px */
 }
 
-.detailsFlag {
-    width:500px;
+.detailsFlag  img {
+    width: 500;
     height: 500px;
-    background:blue;
-    /* margin:20px;
-    padding:30px; */
+  
+    margin:20px;
+    padding:30px;
 }
 .detailsBox {
     width:500px;
-    height: 500px;
-    background:orange;
-    margin:20px;
+    height: 400px;
+    /* background:orange; */
+    margin:30px;
     padding:30px;
 }

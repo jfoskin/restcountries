@@ -31,10 +31,11 @@ console.log(name)
     const domainDetails = document.createElement('p')
     const currencyDetails = document.createElement('p')
     const languageDetails = document.createElement('p')
+    const imgDetails = document.createElement('img')
     // const borderCountryDetails = document.createElement('p')
     const borderCountries= document.createElement('div')
     const borderCountryDetails = document.createElement('div')
-
+imgDetails.src = aCountry[0].flags.svg
     countryName.textContent = aCountry[0].name.common
     nativeNameDetail.textContent = aCountry[0].name.official
     populationDetails.textContent = aCountry[0].population
@@ -51,6 +52,8 @@ console.log(name)
 
 
     // borderCountries.appendChild(borderCountryDetails)
+
+    detailsFlag.appendChild(imgDetails)
 
     details.appendChild(countryName)
     details.appendChild(nativeNameDetail)
