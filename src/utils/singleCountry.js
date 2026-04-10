@@ -15,11 +15,13 @@ console.log(name)
     const detailsFlag = document.createElement('div')
     const details = document.createElement('div')
 
+    detailsDiv.className = 'detailsDiv'
     detailsFlag.className = 'detailsFlag'
     details.className = 'detailsBox'
 
 
 //  console.log(country)
+
     const countryName = document.createElement('h3')
     const nativeNameDetail = document.createElement('p')
     const populationDetails = document.createElement('p')
@@ -33,8 +35,8 @@ console.log(name)
     const borderCountries= document.createElement('div')
     const borderCountryDetails = document.createElement('div')
 
-    // countryName.textContent = country.name
-    // nativeNameDetail.textContent = country.name
+    countryName.textContent = aCountry[0].name.common
+    nativeNameDetail.textContent = aCountry[0].name.official
     populationDetails.textContent = aCountry[0].population
     regionDetails.textContent = aCountry[0].region
     subRegionDetails.textContent = aCountry[0].subregion
@@ -50,8 +52,8 @@ console.log(name)
 
     // borderCountries.appendChild(borderCountryDetails)
 
-    // detailsBox.appendChild(countryName)
-    // detailsBox.appendChild(nativeNameDetail)
+    details.appendChild(countryName)
+    details.appendChild(nativeNameDetail)
     details.appendChild(populationDetails)
     details.appendChild(regionDetails)
     details.appendChild(subRegionDetails)
@@ -66,9 +68,9 @@ console.log(name)
     
     detailsDiv.appendChild(detailsFlag)
     detailsDiv.appendChild(details)
-    countriesList.appendChild(detailsDiv)
+    // countriesList.appendChild(detailsDiv)
     // countryDetailsBox(aCountry)
-    mainContainer.appendChild(countriesList)
+    mainContainer.appendChild(detailsDiv)
 }
 
 // function countryDetailsBox (country)  {

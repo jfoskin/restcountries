@@ -17,13 +17,26 @@ header {
     margin: 10px;
 
 }
+
+.detailsDiv {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    /* margin:20px;
+    padding:30px */
+}
+
 .detailsFlag {
     width:500px;
     height: 500px;
     background:blue;
+    /* margin:20px;
+    padding:30px; */
 }
 .detailsBox {
     width:500px;
     height: 500px;
     background:orange;
+    margin:20px;
+    padding:30px;
 }
