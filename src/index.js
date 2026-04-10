@@ -112,8 +112,13 @@ regions.addEventListener('change', async function(e){
 window.addEventListener('load', countryCards)
 
 toggleDarkMode.addEventListener('click', function (e){
-    console.log(html.classList)
-    html.classList.toggle('data-bs-theme="light"')
+
+  if (html.getAttribute('data-bs-theme') === 'light') {
+        html.setAttribute('data-bs-theme', 'dark');
+    } else {
+        html.setAttribute('data-bs-theme', 'light');
+    }
+
 })
 
 list.addEventListener('click',(e)=>{
