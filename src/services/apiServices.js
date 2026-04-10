@@ -36,7 +36,7 @@ export const getCountriesByRegion = async (regionValue) => {
     try {
         const response = await fetch(`https://restcountries.com/v3.1/region/${regionValue}`)
         const countriesInRegion = await response.json()
-        console.log(countriesInRegion)
+        // console.log(countriesInRegion)
         return countriesInRegion
     } catch (error) {
         console.log(error)

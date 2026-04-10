@@ -1,7 +1,7 @@
 let countriesList = document.getElementById('list')
 
 
-export  function createCountryCardElements (countries){
+export  function createCountryCardElements (countries) {
     let cards  = countries.forEach((country) => {
         
         

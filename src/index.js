@@ -10,20 +10,21 @@ import { createCountryCardElements } from "./utils/createCountry.js"
 //define variables
 let countriesList = document.getElementById('list')
 let mainContainer = document.getElementById('mainContainer')
+let searchInput = document.getElementById('searchInput')
 let toggleDarkMode = document.getElementById('toggleDarkMode')
 let regions = document.getElementById('regions')
 let country = document.querySelector('.card > h4')
 
-// let html = document.querySelector()
+let html = document.querySelector('html')
 
 // let alldetails = await getAllCountries()
 // console.log(alldetails)
 
 //define functions
 
-let countryCards = async () =>{
+let countryCards = async () => {
     let countries = await getAllBasicCountriesDetails()
-    // console.log(countries)
+    console.log(countries)
     // let cards  = countries.forEach((country) => {
         
         
@@ -62,8 +63,9 @@ let countryCards = async () =>{
     //     countriesList.appendChild(countryBasics)
     //     // mainContainer.appendChild(countriesList)
     // });
+    console.log('hello')
     
-    createCountryCardElements(countries)
+    return createCountryCardElements(countries)
     
 
 }
@@ -76,23 +78,6 @@ let countryCards = async () =>{
 
 
 
-regions.addEventListener('change', async function(e){
-    const regionOptions = regions.selectedOptions
-    
-    const selectedRegion = regionOptions[0].value
-    console.log(`this is region`,regionOptions)
-    console.log(selectedRegion)
-    
-    if (selectedRegion === 'All Regions'){
-        countryCards()
-        
-    } else{
-        countriesList.innerHTML =''
-        const selectRegionCountries = await getCountriesByRegion(selectedRegion)
-        createCountryCardElements(selectRegionCountries)
-        console.log(e.target)
-    }
-})
 
 
 
@@ -100,12 +85,36 @@ regions.addEventListener('change', async function(e){
 
 //call eventlisteners
 
+
+regions.addEventListener('change', async function(e){
+    const regionOptions = regions.selectedOptions
+    
+    const selectedRegion = regionOptions[0].value
+    console.log(`this is region`,regionOptions)
+    console.log(selectedRegion)
+    
+    countriesList.innerHTML =''
+    if (selectedRegion == 'All Regions'){
+         countryCards()
+        
+    } else{
+        const selectRegionCountries = await getCountriesByRegion(selectedRegion)
+        createCountryCardElements(selectRegionCountries)
+        console.log(e.target)
+    }
+})
+
+// searchInput.addEventListener('change', async function (e){
+//     console.log(e.target.value)
+// })
+
+
 window.addEventListener('load', countryCards)
 
-// toggleDarkMode.addEventListener('click', function (e){
-//     console.log(html)
-//     html.classList.toggle('data-bs-theme="light')
-// })
+toggleDarkMode.addEventListener('click', function (e){
+    console.log(html.classList)
+    html.classList.toggle('data-bs-theme="light"')
+})
 
 list.addEventListener('click',(e)=>{
     console.log(e)

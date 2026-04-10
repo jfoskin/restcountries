@@ -17,7 +17,7 @@
 <body>
     <header class="navbar bg-body-tertiary">
         <h3>Where in the world?</h3>
-        <div id="bd-theme" data-bs-theme-value="${theme}">
+        <div id="toggleDarkMode" data-bs-theme-value="${theme}">
             <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAAAsTAAALEwEAmpwYAAACv0lEQVR4nO2YW4hNURjHf46GNMwlxm00SEmIlEt5UC5DbqVchwfkAZFL0ihRSsk1isyDy7zReFE8eTDz4MU9Re40yGTIJffr0dZ/19fpzJx97H2cNdm/Wg977+9b67/WXrfvg5iYmJg0DAT60cYYBuwB7gJJ4AswiDbAUOAU8EvCbRmBw7QDqoEfaYR7pRaH6QGcN2K/ATXASz0/B0pwlG7ATSP+qub6RPNuM45SLMG+0CNAR32r0buvQBmOctKIP6h14PNY7y/iKFVG/NkU8aXm2wEcpAvwSgIbJdgyynRgBQ6ywQicm+b7JPPd+1NOUQA8MfPbTh2fStOB6ThGpRG3pAWbMcZmGo6xU8I+AoUt2JSZDqzEMa5JWEMGu6eyO4ZjfJKwHRnsamXndSSBIxRlMTWmGtvJOMIAI2pBBtv25o5Uj0ORVVJlfgD7mcZ+Hg7QywhaHtCnXvavgf7kmYRZxLsD+vQGnsnngZ7zypWA26hlpOm4tyuNJo/sM0G6tysFZRzQLN/vwF6gaxb+RcBW4D6wixBMMOtgWZa+XmrlhvH/DJwAFiuKK0ixLwdmAceBd8bvTdh10KiK7qVpNBMdgLUmXrblpxZ7k/5wuuSAH/mFYr2pbFWIcHQTcKsVoUmVDwpNk0rXDAnbgUJz12nWrw5Dhc6JLcB+4BCwTYMzFphh8kx1RMRsM0KXgE7khgpNKf8s6Rll5UdNJ+r+Yj1kojtwx7SxKOL6/4z6BdNAg/JEUTAYeGjq9qZUTihVaOk39Cjk7TMBrAbep6Rsckpn4HTKznFO2YmgeLfXOcB1U4eXZ13HP8IL7tekjFxSB9d2YArQ1yz2Em2HC4HDwIsUv9vAePJAHx00/r6dbWkCNurAyyvlSrdfbiXl7pe3wBmdBVHvZJFQrMvcUo1utUJS7ywZ7lLMHBMTE/Of8xvFDAS1Q/u2igAAAABJRU5ErkJggg==" alt="Cresent Moon shaped icon">
             <p>Dark Mode</p>
         </div>
@@ -27,7 +27,7 @@
             <div id="search">
                 
                 <!-- <input type="text" placeholder="Seach for a country..."> -->
-            <form class="d-flex" role="search">
+            <form class="d-flex" role="search" id="searchInput">
         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
         <!-- <button class="btn btn-outline-success" type="submit">Search</button> -->
       </form>
@@ -46,7 +46,7 @@
                         <option value="Asia">Asia</option>
                         <option value="Europe">Europe</option>
                         <option value="Oceania">Oceania</option>
-                        <option value="">All Regions</option>
+                        <option value="All Regions">All Regions</option>
                     </select>
                 </form>
             </div>
