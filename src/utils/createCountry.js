@@ -13,10 +13,11 @@ export  function createCountryCardElements (countries) {
         const capitalTag = document.createElement('p')
         const populationTag = document.createElement('p')
         const imgTag = document.createElement('img')
+        const cardBodyTag = document.createElement('div')
         
         //assign class atribute
-        countryBasics.classList = 'countryClass'
-        countryBasics.className = 'card'
+        countryBasics.className = 'card col'
+        cardBodyTag.className = 'card col'
         imgTag.classList = 'card-img-top'
         
         

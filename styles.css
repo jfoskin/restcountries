@@ -12,22 +12,19 @@ body{
 header {
     margin: 10px;
 }
-.dark {
-    background-color: black:
-    color: white;
-    font-family: "Nunito Sans";
-}
 
 
 
-.list {
+#list {
     /* display: flex; */
+    /* flex-direction: row; */
     margin: 10px;
     padding: 10px;
 }
 
 .card {
     width:300px;
+    height: 200px;
     margin: 10px;
     
 }
@@ -41,14 +38,14 @@ header {
 }
 
 .detailsFlag  img {
-    width: 500;
-    height: 500px;
+    width: 100%;
+    height: 50%;
     
     margin:20px;
     padding:30px;
 }
 .detailsBox {
-    width:500px;
+    width:300px;
     height: 400px;
     /* background:orange; */
     margin:30px;
@@ -79,6 +76,11 @@ margin: 15px;
 
 #search{
     width: 500px;
+}
+
+
+#countriesContainers {
+    width:100%;
 }
 
 
