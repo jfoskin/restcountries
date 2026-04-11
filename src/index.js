@@ -1,6 +1,6 @@
 // import functions needed to get data
-import { getAllCountries,
-         getAllBasicCountriesDetails,
+import { 
+        getAllBasicCountriesDetails,
         getCountriesByRegion} from "../src/services/apiServices.js"
 
 import { singleCountryDetails } from "./utils/singleCountry.js"
@@ -11,6 +11,7 @@ import { createCountryCardElements } from "./utils/createCountry.js"
 let countriesList = document.getElementById('list')
 let mainContainer = document.getElementById('mainContainer')
 let searchInput = document.getElementById('searchInput')
+let searching = document.getElementById('searching')
 let toggleDarkMode = document.getElementById('toggleDarkMode')
 let regions = document.getElementById('regions')
 let country = document.querySelector('.card > h4')
@@ -24,7 +25,7 @@ let html = document.querySelector('html')
 
 let countryCards = async () => {
     let countries = await getAllBasicCountriesDetails()
-    console.log(countries)
+    // console.log(countries)
     // let cards  = countries.forEach((country) => {
         
         
@@ -63,7 +64,7 @@ let countryCards = async () => {
     //     countriesList.appendChild(countryBasics)
     //     // mainContainer.appendChild(countriesList)
     // });
-    console.log('hello')
+    // console.log('hello')
     
     return createCountryCardElements(countries)
     
@@ -100,13 +101,25 @@ regions.addEventListener('change', async function(e){
     } else{
         const selectRegionCountries = await getCountriesByRegion(selectedRegion)
         createCountryCardElements(selectRegionCountries)
-        console.log(e.target)
+        // console.log(e.target)
     }
 })
 
-// searchInput.addEventListener('change', async function (e){
-//     console.log(e.target.value)
-// })
+
+searching.addEventListener('input', async function (e){
+let countrycardsType = await getAllBasicCountriesDetails()
+
+    let searchTerm = e.target.value.toLowerCase()
+    
+    let searchedCountries = countrycardsType.filter((country) => {
+        
+         return country.name.common.toLowerCase().includes(searchTerm);
+
+      
+    });
+    countriesList.innerHTML =''
+    createCountryCardElements(searchedCountries)
+})
 
 
 window.addEventListener('load', countryCards)
@@ -122,7 +135,7 @@ toggleDarkMode.addEventListener('click', function (e){
 })
 
 list.addEventListener('click',(e)=>{
-    console.log(e)
+    // console.log(e)
     // console.log(e.target)
     
     let countryName = e.target.parentElement.childNodes[1].textContent.toLowerCase() 

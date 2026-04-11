@@ -16,8 +16,8 @@ export  function createCountryCardElements (countries) {
         const cardBodyTag = document.createElement('div')
         
         //assign class atribute
-        countryBasics.className = 'card col'
-        cardBodyTag.className = 'card col'
+        countryBasics.className = 'card'
+        cardBodyTag.className = 'cardBody'
         imgTag.classList = 'card-img-top'
         
         

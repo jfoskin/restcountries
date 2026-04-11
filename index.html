@@ -14,7 +14,7 @@
     <script  defer src="./src/index.js" type="module"></script>
     <title>Learn About the Countries around the world!</title>
 </head>
-<body>
+<body class="container" >
     <header class="navbar bg-body-tertiary">
         <h3>Where in the world?</h3>
         <div id="toggleDarkMode" data-bs-theme-value="${theme}">
@@ -22,20 +22,26 @@
             <p>Dark Mode</p>
         </div>
     </header>
-    <main id="mainContainer">
+
+
+
+
+    <main id="mainContainer" >
+
+
         <div id="filterContainer">
+
+
             <div id="search">
                 
                 <!-- <input type="text" placeholder="Seach for a country..."> -->
             <form class="d-flex" role="search" id="searchInput">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
-        <!-- <button class="btn btn-outline-success" type="submit">Search</button> -->
-      </form>
-
-
-
+             <input id="searching" class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
+            <!-- <button class="btn btn-outline-success" type="submit">Search</button> -->
+             </form>
 
             </div>
+
             <div id="regionFilter">
                 <form >
                    
@@ -50,12 +56,13 @@
                     </select>
                 </form>
             </div>
+
         </div>
 
-        <!-- <div id="countriesContainers" class="container text-center"> -->
-            <ul id="list" class="row row-cols-4" ></ul>
+        <div id="countriesContainers" >
+            <ul id="list" class="row row-cols-4 m-5 p-2" ></ul>
             
-        <!-- </div> -->
+        </div>
 
 
     </main>
