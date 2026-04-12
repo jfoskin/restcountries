@@ -10,7 +10,6 @@ import { createCountryCardElements } from "./utils/createCountry.js"
 //define variables
 let countriesList = document.getElementById('list')
 let mainContainer = document.getElementById('mainContainer')
-let searchInput = document.getElementById('searchInput')
 let searching = document.getElementById('searching')
 let toggleDarkMode = document.getElementById('toggleDarkMode')
 let regions = document.getElementById('regions')
@@ -31,45 +30,64 @@ const countryCards = async () => {
 
 //call eventlisteners
 
+//inital event listener that loads all the countries and their details 
+window.addEventListener('load', countryCards)
+
+
 //filter countries by the region it is in
 regions.addEventListener('change', async function(e){
     //selecting the option within the select element
     const regionOptions = regions.selectedOptions
-    
+
+    //setting that region 
     const selectedRegion = regionOptions[0].value
-    console.log(`this is region`,regionOptions)
-    console.log(selectedRegion)
     
+    //clearing the inner HTML so it will load new countries based on the region and not appended it to the end of the countries already loaded
     countriesList.innerHTML =''
+
+    //setting conditional 
     if (selectedRegion == 'All Regions'){
+
+        //return all countries
          countryCards()
         
     } else{
+        //getting countries based on the region
         const selectRegionCountries = await getCountriesByRegion(selectedRegion)
+
+        //creating the country cards again but only with countries in the select region 
         createCountryCardElements(selectRegionCountries)
-        // console.log(e.target)
     }
 })
 
 
-searching.addEventListener('input', async function (e){
-let countrycardsType = await getAllBasicCountriesDetails()
+//input search event listener to filter countries based on letter ing in 
 
+searching.addEventListener('input', async function (e){
+    // getting all countries to map over
+    let countrycardsType = await getAllBasicCountriesDetails()
+
+    // the letters we are searching for 
     let searchTerm = e.target.value.toLowerCase()
     
+    //setting a variable to stored the return filtered countries
     let searchedCountries = countrycardsType.filter((country) => {
         
+        //returning the country if the countries common name includes the search term
          return country.name.common.toLowerCase().includes(searchTerm);
 
       
     });
+    //updating the ui so it clears the div before adding the countries that were found
     countriesList.innerHTML =''
+
+    //create cards of the returned countries
     createCountryCardElements(searchedCountries)
 })
 
 
-window.addEventListener('load', countryCards)
 
+//toggle webpage from light to dark mode
 toggleDarkMode.addEventListener('click', function (e){
 
   if (html.getAttribute('data-bs-theme') === 'light') {

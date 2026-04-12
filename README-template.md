@@ -104,7 +104,7 @@ https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_toggle_dark_mode
 https://getbootstrap.com/docs/5.3/getting-started/introduction/
 https://developer.mozilla.org/en-US/docs/Web/API/History_API 
 https://restcountries.com 
-
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/keys 
 
 
 shout out to Village hidden in the 'A' 
