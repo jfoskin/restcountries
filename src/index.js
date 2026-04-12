@@ -14,80 +14,26 @@ let searchInput = document.getElementById('searchInput')
 let searching = document.getElementById('searching')
 let toggleDarkMode = document.getElementById('toggleDarkMode')
 let regions = document.getElementById('regions')
-let country = document.querySelector('.card > h4')
-
 let html = document.querySelector('html')
 
-// let alldetails = await getAllCountries()
-// console.log(alldetails)
+
 
 //define functions
 
-let countryCards = async () => {
+const countryCards = async () => {
+    //get all countries with basic details
     let countries = await getAllBasicCountriesDetails()
-    // console.log(countries)
-    // let cards  = countries.forEach((country) => {
-        
-        
-    //     //creating elements for the country data to be displayed in 
-    //     // const li = document.createElement('li')
-    //     const countryBasics = document.createElement('div')
-    //     const nameTag = document.createElement('h4')
-    //     const regionTag = document.createElement('p')
-    //     const capitalTag = document.createElement('p')
-    //     const populationTag = document.createElement('p')
-    //     const imgTag = document.createElement('img')
-        
-    //     //assign class atribute
-    //     countryBasics.classList = 'countryClass'
-    //     countryBasics.className = 'card'
-    //     imgTag.classList = 'card-img-top'
-        
-        
-    //     //assigning data to each element
-    //     imgTag.src = country.flags.svg
-        
-    //     nameTag.innerText = country.name.common
-    //     populationTag.innerText = country.population
-    //     regionTag.innerText = country.region
-    //     capitalTag.innerText = country.capital
-        
-    //     // console.log(country)
-    //     countryBasics.appendChild(imgTag)
-    //     countryBasics.appendChild(nameTag)        
-    //     countryBasics.appendChild(populationTag)        
-    //     countryBasics.appendChild(regionTag)        
-    //     countryBasics.appendChild(capitalTag)        
-        
-    //     // li.appendChild(countryBasics)
-        
-    //     countriesList.appendChild(countryBasics)
-    //     // mainContainer.appendChild(countriesList)
-    // });
-    // console.log('hello')
-    
+
+    //creating country cards and passing in an array of countries
     return createCountryCardElements(countries)
-    
-
 }
-
-
-
-//call functions 
-
-
-
-
-
-
-
-
 
 
 //call eventlisteners
 
-
+//filter countries by the region it is in
 regions.addEventListener('change', async function(e){
+    //selecting the option within the select element
     const regionOptions = regions.selectedOptions
     
     const selectedRegion = regionOptions[0].value
@@ -135,8 +81,7 @@ toggleDarkMode.addEventListener('click', function (e){
 })
 
 list.addEventListener('click',(e)=>{
-    // console.log(e)
-    // console.log(e.target)
+ 
     
     let countryName = e.target.parentElement.childNodes[1].textContent.toLowerCase() 
     console.log(countryName)
@@ -145,5 +90,4 @@ list.addEventListener('click',(e)=>{
     singleCountryDetails(countryName)
 
 } )
-
 

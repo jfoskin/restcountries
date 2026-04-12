@@ -6,7 +6,6 @@ export  function createCountryCardElements (countries) {
         
         
         //creating elements for the country data to be displayed in 
-        // const li = document.createElement('li')
         const countryBasics = document.createElement('div')
         const nameTag = document.createElement('h4')
         const regionTag = document.createElement('p')
@@ -23,23 +22,20 @@ export  function createCountryCardElements (countries) {
         
         //assigning data to each element
         imgTag.src = country.flags.svg
-        
         nameTag.innerText = country.name.common
         populationTag.innerText = country.population
         regionTag.innerText = country.region
         capitalTag.innerText = country.capital
         
-        // console.log(country)
+        // appending elements to other elements to be shown in the html document
         countryBasics.appendChild(imgTag)
         countryBasics.appendChild(nameTag)        
         countryBasics.appendChild(populationTag)        
         countryBasics.appendChild(regionTag)        
         countryBasics.appendChild(capitalTag)        
         
-        // li.appendChild(countryBasics)
         
         countriesList.appendChild(countryBasics)
-        // mainContainer.appendChild(countriesList)
     });
     return cards
 }
