@@ -90,6 +90,7 @@ searching.addEventListener('input', async function (e){
 //toggle webpage from light to dark mode
 toggleDarkMode.addEventListener('click', function (e){
 
+    //setting conditional
   if (html.getAttribute('data-bs-theme') === 'light') {
         html.setAttribute('data-bs-theme', 'dark');
     } else {
@@ -97,6 +98,7 @@ toggleDarkMode.addEventListener('click', function (e){
     }
 
 })
+
 
 list.addEventListener('click',(e)=>{
  

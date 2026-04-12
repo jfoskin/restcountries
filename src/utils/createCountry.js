@@ -13,10 +13,13 @@ export  function createCountryCardElements (countries) {
         const populationTag = document.createElement('p')
         const imgTag = document.createElement('img')
         const cardBodyTag = document.createElement('div')
+        const regionTagLabel = document.createElement('h6')
+        const capitalTagLabel = document.createElement('h6')
+        const populationTagLabel = document.createElement('h6')
         
         //assign class atribute
         countryBasics.className = 'card'
-        cardBodyTag.className = 'cardBody'
+        cardBodyTag.className = 'card-body'
         imgTag.classList = 'card-img-top'
         
         
@@ -26,13 +29,24 @@ export  function createCountryCardElements (countries) {
         populationTag.innerText = country.population
         regionTag.innerText = country.region
         capitalTag.innerText = country.capital
-        
+
+        regionTagLabel.textContent = 'Region: '
+        capitalTagLabel.textContent = 'Capital: '
+        populationTagLabel.textContent = 'Population: '
         // appending elements to other elements to be shown in the html document
+        
+        
+        
+        
         countryBasics.appendChild(imgTag)
-        countryBasics.appendChild(nameTag)        
-        countryBasics.appendChild(populationTag)        
-        countryBasics.appendChild(regionTag)        
-        countryBasics.appendChild(capitalTag)        
+        countryBasics.appendChild(cardBodyTag)
+        cardBodyTag.appendChild(nameTag)        
+        cardBodyTag.appendChild(populationTagLabel)        
+        cardBodyTag.appendChild(populationTag)        
+        cardBodyTag.append(regionTagLabel)
+        cardBodyTag.appendChild(regionTag)        
+        cardBodyTag.appendChild(capitalTagLabel)        
+        cardBodyTag.appendChild(capitalTag)        
         
         
         countriesList.appendChild(countryBasics)
