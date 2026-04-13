@@ -31,12 +31,12 @@ Users can
 
 ### Screenshot
 
-![](./screenshot.jpg)
 
+![Website example](./design/rest.png)
 
 ### Links
 
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [Rest Cosuntries](https://jfoskin.github.io/restcountries/)
 
 ## My process
 

@@ -146,7 +146,7 @@ export const  singleCountryDetails = async(name) => {
 //                 if (!response.ok) {
 //                     throw new Error('Network response was notok');
 //                 }
-//                 const clickedCountryDetails = awaitresponse.json();
+//                 const clickedCountryDetails = await response.json();
 //                 console.log('Clicked Country Details:',
 // clickedCountryDetails);
 
