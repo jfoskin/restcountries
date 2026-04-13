@@ -125,6 +125,7 @@ export const  singleCountryDetails = async(name) => {
         detailsDiv.appendChild(detailsFlag)
         detailsDiv.appendChild(details)
        
+        
         mainContainer.appendChild(detailsDiv)
     }
 

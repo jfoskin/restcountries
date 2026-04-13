@@ -12,14 +12,14 @@ export  function createCountryCardElements (countries) {
         const capitalTag = document.createElement('p')
         const populationTag = document.createElement('p')
         const imgTag = document.createElement('img')
-        const cardBodyTag = document.createElement('div')
+        // const cardBodyTag = document.createElement('div')
         const regionTagLabel = document.createElement('h6')
         const capitalTagLabel = document.createElement('h6')
         const populationTagLabel = document.createElement('h6')
         
         //assign class atribute
         countryBasics.className = 'card'
-        cardBodyTag.className = 'card-body'
+        // cardBodyTag.className = 'card-body'
         imgTag.classList = 'card-img-top'
         
         
@@ -39,14 +39,14 @@ export  function createCountryCardElements (countries) {
         
         
         countryBasics.appendChild(imgTag)
-        countryBasics.appendChild(cardBodyTag)
-        cardBodyTag.appendChild(nameTag)        
-        cardBodyTag.appendChild(populationTagLabel)        
-        cardBodyTag.appendChild(populationTag)        
-        cardBodyTag.append(regionTagLabel)
-        cardBodyTag.appendChild(regionTag)        
-        cardBodyTag.appendChild(capitalTagLabel)        
-        cardBodyTag.appendChild(capitalTag)        
+        // countryBasics.appendChild(cardBodyTag)
+        countryBasics.appendChild(nameTag)        
+        countryBasics.appendChild(populationTagLabel)        
+        countryBasics.appendChild(populationTag)        
+        countryBasics.append(regionTagLabel)
+        countryBasics.appendChild(regionTag)        
+        countryBasics.appendChild(capitalTagLabel)        
+        countryBasics.appendChild(capitalTag)        
         
         
         countriesList.appendChild(countryBasics)
